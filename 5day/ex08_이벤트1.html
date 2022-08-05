@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Click!</h1>
+
+</body>
+<script>
+    let h1=document.querySelector('h1');   
+    h1.addEventListener('click',function(){
+        h1.style.color='blue';
+    })
+    //2.마우스를 올렸을때 배경색 변경
+    h1.addEventListener('mouseover',function(){
+        h1.style.backgroundColor='cyan';
+    })
+    h1.addEventListener('mouseout',function(){
+        h1.style.backgroundColor='white';
+    })
+
+    
+</script>
+</html>
