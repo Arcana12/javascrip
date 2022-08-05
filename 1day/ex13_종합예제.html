@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.java python,web세과목점수 입력
+        let java = parseInt(prompt("java점수 입력"));
+        let python = parseInt(prompt("python점수 입력"));
+        let web = parseInt(prompt("web점수 입력"));
+        //2.1입력받은 점수를 총점 평균점수를 등록
+        let totalScore = java+python+web;
+        //3.2. 평균점수는 소수점두자리까지
+        let avgScore = (totalScore/3).toFixed(2);
+        //2.3콘솔창에 평균점수출력
+        //3.평균점수가 90이넘으면 A등급
+        //80이 넘으면 B등급, 70이넘으면C, 그외는 F
+        let grade ='';
+        if(avgScore>=90){
+            grade = 'A';
+        }else if(avgScore>=80){
+            grade = 'B';
+        }else if(avgScore>=70){
+            grade = 'C';
+        }else{
+            grade = 'F';
+        }
+
+        //4.결과값출력
+        // 예)평균은 몇점이고 등급은 A입니다.
+        document.write("평균은 "+avgScore+"이고 등급은 "+grade+"입니다");
+
+    </script>
+</body>
+</html>

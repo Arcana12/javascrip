@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person={};
+        person.name="정대일";
+        person.age=30;
+        person.gender='남자';
+        person.address='광주';
+        person.favMovie=['매트릭스','탑건2','어벤져스'];
+        person.favFood=['치킨','피자','국밥'];
+        person.greeting=function(){
+            let result= this.name+"님의 나이는 "+this.age+"이고 성별은 "+this.gender+"입니다";
+            result += "<br>사는 곳은 "+this.address+"이고 좋아하는 영화는 "+this.favMovie+"입니다";
+            return result;
+        }
+
+        document.write(person.greeting());
+    </script>
+</body>
+</html>

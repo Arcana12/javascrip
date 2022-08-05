@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let subNum = Number(prompt("과목 수 입력"));
+        let subName =[];
+        let subScore = [];
+        let totalScore = 0;
+        let avgScore = 0;
+        //2.반복문사용해서 과목명 입력
+        //3.반복문 사용해서 점수 입력, 총합과 평균 계산
+        //4.총합과 평균을 콘솔창에 출력
+        
+        for(let i=0; i<subNum;i++){
+            //subName[i] = prompt("과목명 입력");
+            subName.push(prompt("과목명 입력"))
+            subScore[i] = Number(prompt("점수 입력"));
+
+            totalScore += subScore[i];
+        }
+        
+        avgScore = totalScore/subNum;
+        console.log(totalScore);
+        console.log(avgScore);
+
+        document.write('<table border="1px solid black">');
+        document.write('<tr>');
+        //반복문써서 열제목에 과목명 넣기
+        for(let i=0;i<subNum;i++){
+            document.write('<td>'+subName[i]+'</td>');
+        }
+        //종합과 평균열제목 넣기
+        document.write('</tr>');
+        document.write('<tr>');
+        //반복문써서 열제목에 점수 넣기
+        for(let i=0;i<subNum;i++){
+            document.write('<td>'+subScore[i]+'</td>');
+        }
+        //종합과 평균열제목 넣기
+        document.write('<td>'+subScore+'</td>');
+        document.write('<td>'+avgScore+'</td>');
+        document.write('</tr>');
+        
+        document.write('<table>');
+
+
+    </script>
+</body>
+</html>

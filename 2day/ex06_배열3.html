@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.홀수와 홀수 개수를 알림창에 띄우기
+        let list=[1,2,3,4,5,6,7,8,9];
+        //2.홀수를 넣어줄 배열(odd),짝수(even)
+        let odd=[];
+        //홀수 개수
+        let cnt=0;
+        //반복문 for 조건문if문 사용해서
+        for(let i=0; i<list.length;i++){
+            if(list[i]%2!=0){
+                odd.push(list[i]);
+                cnt++;
+            }
+        }
+        alert('홀수는 '+odd+'이고 홀수의 개수는'+cnt+'개입니다');
+    </script>
+</body>
+</html>
